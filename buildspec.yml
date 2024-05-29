@@ -5,10 +5,11 @@ phases:
     commands:
       - echo Entered the build phase...
       - mvn clean package
+      - cd ..
   post_build:
     commands:
       - echo Build completed successfully
 artifacts:
   files:
-    - target/order-service.jar
+    - order-service.jar
   discard-paths: yes
